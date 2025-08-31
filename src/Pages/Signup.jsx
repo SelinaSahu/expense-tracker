@@ -18,7 +18,7 @@ export default function Signup() {
     }
 
     try {
-      await axios.post("http://localhost:5000/signup", {
+      await axios.post("http://localhost:3001/api/auth/signup", {
         name,
         email,
         password,
@@ -39,7 +39,7 @@ export default function Signup() {
   return (
     <div className="auth-container">
       <h1>Expenso</h1>
-      <h2>Create your account</h2>
+      <h2 className="page-heading">Create your account</h2>
       <form onSubmit={handleSignup}>
         <input
           type="text"

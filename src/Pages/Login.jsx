@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../Context/AuthContext";
 import { useState } from "react";
 import axios from "axios";
 import "../css/login.css";
@@ -19,7 +19,7 @@ export default function Login() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/login", {
+      const res = await axios.post("http://localhost:3001/api/auth/login", {
         email,
         password,
       });
@@ -40,7 +40,7 @@ export default function Login() {
   return (
     <div className="auth-container">
       <h1>Expenso</h1>
-      <h2>Login</h2>
+      <h2 className="page-heading">Login</h2>
 
       <form onSubmit={handleLogin}>
         <input
