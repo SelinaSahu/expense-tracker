@@ -1,0 +1,10 @@
+.UserDetailForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
