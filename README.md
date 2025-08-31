@@ -1,12 +1,64 @@
-# React + Vite
+# Expenso - Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, feature-rich expense tracking application built with React and Node.js.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Secure login and signup system
+- **Expense Management**: Add, edit, and delete expenses
+- **Income Tracking**: Track monthly income and calculate balance
+- **Advanced Reports**: Interactive charts and analytics
+- **Data Export**: Export your financial data
+- **Responsive Design**: Works on desktop and mobile devices
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, Vite, CSS3
+- **Backend**: Node.js, Express
+- **Database**: MongoDB with Mongoose
+- **Charts**: Recharts for data visualization
+- **Authentication**: JWT tokens
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## Project Structure
+
+```
+expenso/
+├── src/
+│   ├── components/     # Reusable components
+│   ├── Pages/         # Page components
+│   ├── Context/       # React context providers
+│   └── css/          # Stylesheets
+├── backend/          # Node.js server
+└── public/          # Static assets
+```
+
+## Features Overview
+
+### Dashboard
+- Add and manage expenses
+- Track monthly income
+- View financial summary
+- Filter and sort expenses
+
+### Reports
+- Interactive pie charts
+- Bar and line charts
+- Category-wise expense breakdown
+- Export functionality
+
+### Settings
+- User profile management
+- Account settings
+- Data export and backup
+- Account deletion
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
