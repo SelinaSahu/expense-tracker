@@ -1,5 +1,5 @@
 // src/components/Settings.jsx
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "../css/Settings.css";
 
