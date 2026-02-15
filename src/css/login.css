@@ -1,67 +1,147 @@
 /* Apply only to login page, won't affect other pages */
-/* body {
+body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #38ef7d, #11998e);
-  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Unified Page Heading Style */
+.page-heading {
+  color: #333;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.page-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
 
 /* Centered login card */
 .auth-container {
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Brand title */
 .auth-container h1 {
-  font-size: 32px;
-  color: #0b3d91;
+  font-size: 36px;
+  color: #667eea;
   margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Page heading */
 .auth-container h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #555;
+  font-weight: 500;
 }
 
 /* Inputs */
 .auth-container input {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 15px;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 2px solid #e1e5e9;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.auth-container input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.auth-container input::placeholder {
+  color: #999;
 }
 
 /* Login button */
 .auth-container button {
   width: 100%;
-  background: #38ef7d;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  padding: 12px;
-  font-weight: bold;
-  font-size: 15px;
-  border-radius: 8px;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 12px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .auth-container button:hover {
-  background: #32d36b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.auth-container button:active {
+  transform: translateY(0);
 }
 
 .auth-container p {
-  margin-top: 15px;
+  margin-top: 25px;
   font-size: 14px;
+  color: #666;
+}
+
+.auth-container span {
+  color: #667eea;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-container span:hover {
+  color: #764ba2;
+  text-decoration: underline;
 }
